@@ -1,0 +1,115 @@
+@import "sass/lib.scss";
+
+/* Navigation */
+@media #{$desktopOnly} {
+  .mobile{display: none;}
+  .back  {display: none;}
+}
+
+@media #{$mobileOnly}{
+  .back {
+    position:fixed;
+    top: 0;
+    width: 100vw;
+    height: $size-nav-mobile-height;
+    background-color: $color-grey-light;
+    z-index: 3;
+    .title {
+      margin-top:13px;
+      margin-left: 15px;
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    border: $color-action-gradient1;
+    position: fixed;
+    width: $button-width;
+    height: $button-mobile-height;
+    right: $button-margin;
+    top: $button-margin;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: $color-blue;
+  }
+
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: $color-blue;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    display: none;
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: none;
+  }
+
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: $color-primary-background-inverted;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+
+  .list-lang {
+    outline: none;
+  }
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+
+  .fluid.button.bm-item {
+    color: $color-primary-background-inverted;
+    margin-bottom: 10px;
+  }
+
+  .circular.button.bm-item {
+    color: $color-primary-background-inverted;
+    margin-bottom: 10px;
+  }
+  .circular.button.bm-item.selected {
+     background: $color-primary-background-inverted;
+     border: $color-blue 1px solid;
+     color: $color-blue;
+   }
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+}

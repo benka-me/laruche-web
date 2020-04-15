@@ -1,0 +1,71 @@
+@import "sass/lib.scss";
+
+button {
+  background: none;
+  border: none;
+  color: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+}
+
+.tab {
+  border-left: $color-grey-extra-light 3px solid;
+  background-color: $color-white;
+  text-align: center;
+  padding: 2px;
+  border: none;
+  width: 78%;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 10px 10px 10px;
+}
+.fluid {
+  width: 100%;
+}
+.circular {
+  border-radius: 25px;
+}
+
+//COLOR
+.red {
+  border: 1px solid $color-red;
+  background-color: $color-red;
+  color: $color-red;
+}
+.warning {
+  border: 1px solid $color-orange;
+  background-color: $color-orange;
+  color: $color-orange;
+}
+.error {
+  border: 1px solid $color-red;
+  background-color: $color-red;
+  color: $color-red;
+}
+.info {
+  border: 1px solid $color-solarized;
+  background-color: $color-solarized;
+  color: $color-solarized;
+}
+.blue {
+  border: 1px solid $color-blue;
+  background-color: $color-blue;
+  color: $color-blue;
+}
+
+//DESIGN
+.rounded {
+  background: $color-grey-extra-light;
+}
+.background {
+  border: none;
+  color: $color-grey-extra-light;
+}
+

@@ -1,0 +1,22 @@
+//IMPORT
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700i,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amaranth&display=swap");
+@import "sass/lib.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: $color-primary-background;
+  color: $color-primary-font;
+  font-family: $font-family;
+}
+
+.main {
+  margin-top: $size-nav-height + 10px;
+}
+@media #{$mobileOnly} {
+  .main {
+    margin-top: $size-nav-height;
+  }
+}

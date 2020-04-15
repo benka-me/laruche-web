@@ -1,0 +1,66 @@
+query getHome($token: String!) {
+    GetHome(input: {Token: $token}) {
+        Bees {
+            Author
+            Description
+            DevLang
+            Framework {
+                Author
+                Name
+            }
+            Keywords
+            License
+            Name
+            PkgName
+            Port
+            Repo
+            Rpcs {
+                Name
+                Input
+                Output
+                Line
+            }
+        }
+        Hives {
+            Author
+            Name
+            Repo
+        }
+    }
+}
+
+query getFullBee($token: String!, $author: String!, $name: String!) {
+    GetFullBee(input: {Auth: {Token: $token}, Author: $author, Name: $name}) {
+        Bee {
+            Author
+            Description
+            DevLang
+            Framework {
+                Author
+                Name
+            }
+            Keywords
+            License
+            Name
+            PkgName
+            Port
+            Repo
+            Rpcs {
+                Name
+                Input
+                Output
+                Line
+            }
+
+        }
+        Details {
+            Readme
+        }
+    }
+}
+
+query getBeeDetails($token: String!,  $author: String!, $name: String!) {
+    GetBeeDetails(input: {Auth: {Token: $token},  Author: $author, Name: $name}) {
+        Readme
+    }
+}

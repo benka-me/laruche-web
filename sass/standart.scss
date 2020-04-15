@@ -1,0 +1,37 @@
+@import 'variables';
+h1 {
+  font-family: $font-family-headers;
+  font-size: 2.2rem;
+}
+h2 {
+  font-family: $font-family-headers;
+  font-size: 1.8rem;
+}
+h3 {
+  font-family: $font-family-headers;
+  margin-top: 0px;
+  font-size: 1.2rem;
+}
+h4 {
+  font-family: $font-family-headers;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 16px;
+  font-family: $font-family;
+}
+@media #{$mobileOnly} {
+  p {
+    font-size: 13px;
+  }
+}
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000;
+}

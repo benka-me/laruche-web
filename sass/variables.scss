@@ -1,0 +1,69 @@
+$color-primary: #e7e6e6;
+$color-primary-inverted: #221d25;
+
+$color-primary-background: #fdfdfd;
+$color-primary-background-inverted: #e0e0e0;
+
+$color-primary-font: #14141d;
+$color-primary-font-inverted: #e8eef5;
+
+$color-action-gradient1: #db3966;
+$color-action-gradient2: #95092e;
+
+$color-action-gradient1-hover: rgba(255, 82, 126, 0.97);
+$color-action-gradient2-hover: #af2a4e;
+
+$color-shadow: #bdb7bd;
+
+$color-main-action: #5678b4;
+$color-main-ambiance: #6476a2;
+
+$color-orange: #954e14;
+$color-blue: #286089;
+$color-link: #4479b6;
+$color-yellow: #e0c14b;
+$color-green: #31b57f;
+$color-green-light: #b6ffda;
+$color-pink: #b5527b;
+
+$color-red: #b01612;
+$color-white: #f8f8f8;
+$color-grey-extra-light: #eff4f9;
+$color-grey-light: #eaeff4;
+$color-grey-med: #bcc8c8;
+$color-grey-dark: #474747;
+$color-black: #0e1b1c;
+$color-solarized: rgb(0, 76, 97);
+$color-solarized-dark: rgb(0, 43, 54);
+
+//SIZE
+
+$size-height-fill: 4vh;
+$size-jacket-width: 200px;
+$size-jacket-height: 300px;
+
+$button-margin: 20px;
+$button-width: 20px;
+$button-height: 60px;
+$button-mobile-height: 20px;
+$size-nav-height: $button-height;
+$size-nav-mobile-height: 52px;
+
+$font-family-bold: "Source Sans Pro", sans-serif;
+$font-family-headers: "Amaranth", sans-serif;
+$font-family: "Roboto", sans-serif;
+// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+// 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+// 'Helvetica Neue', sans-serif;
+
+//MEDIA QUERIES
+
+$limit-mobile: 600px;
+$limit-tablet: 800px;
+
+$mobileOnly: (
+  max-width: $limit-tablet
+);
+$desktopOnly: (
+  min-width: $limit-tablet + 1
+);

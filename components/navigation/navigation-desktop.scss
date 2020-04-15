@@ -1,0 +1,63 @@
+@import "sass/lib.scss";
+@import "components/class/button/button.scss";
+
+/* Navigation */
+@media #{$mobileOnly} {
+  .navbar {
+    display: none;
+  }
+}
+
+@media #{$desktopOnly} {
+}
+.navbar {
+  background-color: #f18787e5;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: $size-nav-height;
+  z-index: 100;
+  background-color: $color-white;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  * {
+    flex: 1 0;
+  }
+
+  .menuLeft {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    * {
+      margin: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+    }
+    h1 {
+      color: $color-solarized;
+    }
+    button svg {
+      padding-top: 8px;
+      margin-right: 8px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .menuRight {
+    @include flexCenter(row-reverse, 0 1 100px);
+    height: $size-nav-height;
+    * {
+      height: 100%;
+      button {
+        @extend .tab;
+      }
+    }
+  }
+}

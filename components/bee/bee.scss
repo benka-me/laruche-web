@@ -1,0 +1,8 @@
+@import 'sass/lib.scss';
+@import "components/class/link/link.scss";
+
+/* News */
+
+.beeTitle {
+    @extend .link;
+}

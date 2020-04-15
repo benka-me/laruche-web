@@ -1,0 +1,79 @@
+/* News */
+@import "../../../sass/lib.scss";
+
+.ticket {
+  margin: 14px 0 0 0;
+  border: $color-grey-med 1px solid;
+  border-radius: 3px;
+}
+
+$size-icon: 52px;
+.beeHeader {
+  display: flex;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #f4f9fc, #f1f1f1);
+  height: 90px;
+  @media #{$mobileOnly} {
+    height: 80px;
+  }
+  .icon {
+    padding-top: 9px;
+    padding-left: 6px;
+    height: 50%;
+    width: auto;
+    color: $color-grey-dark;
+    border-top-left-radius: 2px;
+    @media #{$mobileOnly} {
+      padding-top: 5px;
+      padding-left: 3px;
+    }
+  }
+}
+
+.beeTitle {
+  padding: 5px 5px 5px 8px;
+  .author {
+    font-weight: bold;
+    color: #4e5762;
+  }
+  .name {
+    font-weight: normal;
+    color: #292929;
+  }
+  .beeGit {
+    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    .gitIcon {
+      height: 24px;
+      width: 24px;
+    }
+    .gitLink {
+      padding-left: 3px;
+    }
+  }
+}
+.beeTitle > * {
+  align-items: center;
+}
+
+.beeBody {
+  padding: 5px 10px 5px 20px;
+}
+
+.beeFooter {
+  background: $color-grey-light;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px 5px 20px;
+}
+
+.beeFooter > * {
+  height: 27px;
+}
+
+@media #{$desktopOnly} {
+}
+@media #{$mobileOnly} {
+}

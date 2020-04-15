@@ -1,0 +1,33 @@
+@import "variables";
+
+@media all and (max-width: $limit-tablet) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem;
+  }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic;
+  }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+  .main {
+    margin-top: $size-nav-height;
+    .title {
+      display: none;
+    }
+  }
+  .project-board h2 {
+    padding-top: 1rem;
+  }
+}
+

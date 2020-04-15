@@ -1,0 +1,24 @@
+/* News */
+@import 'sass/variables.scss';
+
+.framework{
+  flex-basis: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 26px;
+}
+.framework > * {
+}
+
+.fa-boxes {
+  height: 26px;
+  width: 20px;
+  margin-right: 4px;
+}
+
+@media all and (max-width: $limit-tablet){
+}
+
+@media all and (min-width: $limit-tablet + 1){
+}

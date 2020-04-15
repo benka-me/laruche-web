@@ -1,0 +1,9 @@
+@mixin flexCenter($direction, $flex) {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: $direction;
+  align-content: center;
+  * {
+    flex: $flex;
+  }
+}

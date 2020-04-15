@@ -1,0 +1,26 @@
+@import "sass/lib.scss";
+
+$margin: 0;
+.link {
+  h2 {
+    margin: $margin;
+    padding: 0;
+    text-decoration: underline;
+    color: $color-link;
+    @media #{$mobileOnly} {
+      font-size: 23px;
+    }
+  }
+}
+
+.namespace {
+  @include flexCenter(row, 0 0 1);
+  h2 {
+    padding-left: 3px;
+    margin: 0;
+  }
+  @media #{$mobileOnly} {
+    padding-left: 0px;
+  }
+  @extend .link;
+}

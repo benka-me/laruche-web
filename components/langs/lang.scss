@@ -1,0 +1,37 @@
+/* News */
+@import "sass/lib.scss";
+
+.lang {
+  flex: 1 0 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.javascript {
+  margin-left: 2px;
+  padding-bottom: 1px;
+  width: 19px;
+  height: 19px;
+  color: black;
+}
+
+.go {
+  width: 25px;
+  height: 25px;
+  color: black;
+}
+
+.python {
+  margin-left: 1px;
+  padding-top: 1px;
+  width: 25px;
+  height: 25px;
+  color: black;
+}
+
+@media all and (max-width: $limit-tablet) {
+}
+
+@media all and (min-width: $limit-tablet + 1) {
+}

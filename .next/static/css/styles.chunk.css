@@ -1,0 +1,1041 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700i,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Amaranth&display=swap);
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+button {
+  background: none;
+  border: none;
+  color: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer; }
+
+.tab, .menu .menuRight * button {
+  border-left: #eff4f9 3px solid;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 2px;
+  border: none;
+  width: 78%;
+  outline: none; }
+
+.btn {
+  padding: 10px 10px 10px 10px; }
+
+.fluid {
+  width: 100%; }
+
+.circular {
+  border-radius: 25px; }
+
+.red {
+  border: 1px solid #b01612;
+  background-color: #b01612;
+  color: #b01612; }
+
+.warning {
+  border: 1px solid #954e14;
+  background-color: #954e14;
+  color: #954e14; }
+
+.error {
+  border: 1px solid #b01612;
+  background-color: #b01612;
+  color: #b01612; }
+
+.info {
+  border: 1px solid #004c61;
+  background-color: #004c61;
+  color: #004c61; }
+
+.blue {
+  border: 1px solid #286089;
+  background-color: #286089;
+  color: #286089; }
+
+.rounded {
+  background: #eff4f9; }
+
+.background {
+  border: none;
+  color: #eff4f9; }
+
+/* Navigation */
+@media (max-width: 800px) {
+  .navbar {
+    display: none; } }
+
+.navbar {
+  background-color: #f18787e5;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 60px;
+  z-index: 100;
+  background-color: #f8f8f8; }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap; }
+  .menu * {
+    flex: 1 0; }
+  .menu .menuLeft {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center; }
+    .menu .menuLeft * {
+      margin: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto; }
+    .menu .menuLeft h1 {
+      color: #004c61; }
+    .menu .menuLeft button svg {
+      padding-top: 8px;
+      margin-right: 8px;
+      width: 30px;
+      height: 30px; }
+  .menu .menuRight {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-content: center;
+    height: 60px; }
+    .menu .menuRight * {
+      flex: 0 1 100px; }
+    .menu .menuRight * {
+      height: 100%; }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+/* Navigation */
+@media (min-width: 801px) {
+  .mobile {
+    display: none; }
+  .back {
+    display: none; } }
+
+@media (max-width: 800px) {
+  .back {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 52px;
+    background-color: #eaeff4;
+    z-index: 3; }
+    .back .title {
+      margin-top: 13px;
+      margin-left: 15px; }
+      .back .title * {
+        padding: 0;
+        margin: 0;
+        font-size: 1.3rem; }
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    border: #db3966;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 20px; }
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #286089; }
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #286089; }
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    display: none;
+    height: 24px;
+    width: 24px; }
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: none; }
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%; }
+  /* General sidebar styles */
+  .bm-menu {
+    background: #e0e0e0;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em; }
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47; }
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em; }
+  .list-lang {
+    outline: none; }
+  /* Individual item */
+  .bm-item {
+    display: inline-block; }
+  .fluid.button.bm-item {
+    color: #e0e0e0;
+    margin-bottom: 10px; }
+  .circular.button.bm-item {
+    color: #e0e0e0;
+    margin-bottom: 10px; }
+  .circular.button.bm-item.selected {
+    background: #e0e0e0;
+    border: #286089 1px solid;
+    color: #286089; }
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3); } }
+
+/* News */
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+.lang {
+  flex: 1 0 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; }
+
+.javascript {
+  margin-left: 2px;
+  padding-bottom: 1px;
+  width: 19px;
+  height: 19px;
+  color: black; }
+
+.go {
+  width: 25px;
+  height: 25px;
+  color: black; }
+
+.python {
+  margin-left: 1px;
+  padding-top: 1px;
+  width: 25px;
+  height: 25px;
+  color: black; }
+
+/* News */
+.framework {
+  flex-basis: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 26px; }
+
+.fa-boxes {
+  height: 26px;
+  width: 20px;
+  margin-right: 4px; }
+
+/* News */
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+.ticket {
+  margin: 14px 0 0 0;
+  border: #bcc8c8 1px solid;
+  border-radius: 3px; }
+
+.beeHeader {
+  display: flex;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #f4f9fc, #f1f1f1);
+  height: 90px; }
+  @media (max-width: 800px) {
+    .beeHeader {
+      height: 80px; } }
+  .beeHeader .icon {
+    padding-top: 9px;
+    padding-left: 6px;
+    height: 50%;
+    width: auto;
+    color: #474747;
+    border-top-left-radius: 2px; }
+    @media (max-width: 800px) {
+      .beeHeader .icon {
+        padding-top: 5px;
+        padding-left: 3px; } }
+
+.beeTitle {
+  padding: 5px 5px 5px 8px; }
+  .beeTitle .author {
+    font-weight: bold;
+    color: #4e5762; }
+  .beeTitle .name {
+    font-weight: normal;
+    color: #292929; }
+  .beeTitle .beeGit {
+    padding-top: 3px;
+    display: flex;
+    align-items: center; }
+    .beeTitle .beeGit .gitIcon {
+      height: 24px;
+      width: 24px; }
+    .beeTitle .beeGit .gitLink {
+      padding-left: 3px; }
+
+.beeTitle > * {
+  align-items: center; }
+
+.beeBody {
+  padding: 5px 10px 5px 20px; }
+
+.beeFooter {
+  background: #eaeff4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px 5px 20px; }
+
+.beeFooter > * {
+  height: 27px; }
+
+/* News */
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+.install {
+  display: flex;
+  flex-direction: column; }
+  .install * {
+    flex: 1 0 0; }
+
+.installButton, .installDone {
+  padding: 0 10px 0 10px;
+  border: 3px #002b36 solid;
+  border-radius: 5px;
+  background: #002b36;
+  cursor: copy;
+  text-align: left; }
+
+.installDone {
+  border: 3px solid #b6ffda; }
+
+.copied {
+  margin-top: -24px;
+  font-size: 13px;
+  color: #bcc8c8;
+  text-align: center; }
+
+.copy {
+  color: #bcc8c8;
+  text-align: right;
+  border: #bcc8c8 1px ridge;
+  width: 100px;
+  position: absolute; }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+.link h2, .namespace h2 {
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  color: #4479b6; }
+  @media (max-width: 800px) {
+    .link h2, .namespace h2 {
+      font-size: 23px; } }
+
+.namespace {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center; }
+  .namespace * {
+    flex: 0 0 1; }
+  .namespace h2 {
+    padding-left: 3px;
+    margin: 0; }
+  @media (max-width: 800px) {
+    .namespace {
+      padding-left: 0px; } }
+
+/*!
+ * # Semantic UI 2.4.1 - Container
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+            Container
+*******************************/
+/* All Sizes */
+.container {
+  display: block;
+  max-width: 100% !important; }
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important; }
+  .grid.container {
+    width: auto !important; }
+  .relaxed.grid.container {
+    width: auto !important; }
+  .very.relaxed.grid.container {
+    width: auto !important; } }
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 723px;
+    margin-left: auto !important;
+    margin-right: auto !important; }
+  .grid.container {
+    width: calc( 723px  +  2rem) !important; }
+  .relaxed.grid.container {
+    width: calc( 723px  +  3rem) !important; }
+  .very.relaxed.grid.container {
+    width: calc( 723px  +  5rem) !important; } }
+
+/* Small Monitor */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 933px;
+    margin-left: auto !important;
+    margin-right: auto !important; }
+  .grid.container {
+    width: calc( 933px  +  2rem) !important; }
+  .relaxed.grid.container {
+    width: calc( 933px  +  3rem) !important; }
+  .very.relaxed.grid.container {
+    width: calc( 933px  +  5rem) !important; } }
+
+/* Large Monitor */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1127px;
+    margin-left: auto !important;
+    margin-right: auto !important; }
+  .grid.container {
+    width: calc( 1127px  +  2rem) !important; }
+  .relaxed.grid.container {
+    width: calc( 1127px  +  3rem) !important; }
+  .very.relaxed.grid.container {
+    width: calc( 1127px  +  5rem) !important; } }
+
+/*******************************
+             Types
+*******************************/
+/* Text Container */
+.text.container {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  max-width: 700px !important;
+  line-height: 1.5; }
+
+.text.container {
+  font-size: 1.14285714rem; }
+
+/* Fluid */
+.fluid.container {
+  width: 100%; }
+
+/*******************************
+           Variations
+*******************************/
+[class*="left aligned"].container {
+  text-align: left; }
+
+[class*="center aligned"].container {
+  text-align: center; }
+
+[class*="right aligned"].container {
+  text-align: right; }
+
+.justified.container {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
+/*******************************
+         Theme Overrides
+*******************************/
+/*******************************
+         Site Overrides
+*******************************/
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+button {
+  background: none;
+  border: none;
+  color: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer; }
+
+.tab {
+  border-left: #eff4f9 3px solid;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 2px;
+  border: none;
+  width: 78%;
+  outline: none; }
+
+.btn {
+  padding: 10px 10px 10px 10px; }
+
+.fluid {
+  width: 100%; }
+
+.circular {
+  border-radius: 25px; }
+
+.red {
+  border: 1px solid #b01612;
+  background-color: #b01612;
+  color: #b01612; }
+
+.warning {
+  border: 1px solid #954e14;
+  background-color: #954e14;
+  color: #954e14; }
+
+.error {
+  border: 1px solid #b01612;
+  background-color: #b01612;
+  color: #b01612; }
+
+.info {
+  border: 1px solid #004c61;
+  background-color: #004c61;
+  color: #004c61; }
+
+.blue {
+  border: 1px solid #286089;
+  background-color: #286089;
+  color: #286089; }
+
+.rounded {
+  background: #eff4f9; }
+
+.background {
+  border: none;
+  color: #eff4f9; }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #fdfdfd;
+  color: #14141d;
+  font-family: "Roboto", sans-serif; }
+
+.main {
+  margin-top: 70px; }
+
+@media (max-width: 800px) {
+  .main {
+    margin-top: 60px; } }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/
