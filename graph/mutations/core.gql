@@ -1,6 +1,0 @@
-#mutation insertCode ($code: Int!, $title: String!) {
-#    insertCode(input: {Code: $code, Title: $title}) {
-#        Status
-#        StatusMessage
-#    }
-#}
