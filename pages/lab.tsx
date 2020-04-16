@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import context from "context/context";
 import { Container } from "components/class/container/container";
-import { Button } from "components/class/button/button";
+import { SignUp } from "components/class/form/SignUp";
 
 const Wrap = ({ title, children }) => (
   <div>
@@ -24,9 +24,7 @@ export default () => {
   }, []);
   return (
     <Container>
-      <Wrap title="button">
-        <Button onClick={null} design={"background"} color={"info"} circular >HAHA</Button>
-      </Wrap>
+      <SignUp/>
     </Container>
   );
 };

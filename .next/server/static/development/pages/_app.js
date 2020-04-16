@@ -172,6 +172,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
+/***/ "./components/class/button/Button.tsx":
+/*!********************************************!*\
+  !*** ./components/class/button/Button.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button.scss */ "./components/class/button/button.scss");
+/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/benka/go/src/github.com/benka-me/laruche-web/components/class/button/Button.tsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const none = "";
+
+String.prototype.spaced = function () {
+  return this + " ";
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (props => {
+  const className = props.className.spaced() + _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.btn.spaced() + (props.circular ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.circular.spaced() : none) + (props.color ? props.color.spaced() : none) + (props.design ? props.design.spaced() : none) + (props.fluid ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.fluid.spaced() : none);
+  return __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 5
+    }
+  }, __jsx("button", {
+    disabled: props.disabled,
+    style: props.style,
+    onClick: props.onClick,
+    className: className,
+    type: props.type,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 7
+    }
+  }, props.children));
+});
+
+/***/ }),
+
 /***/ "./components/class/button/button.scss":
 /*!*********************************************!*\
   !*** ./components/class/button/button.scss ***!
@@ -195,54 +244,6 @@ module.exports = {
 	"blue": "blue",
 	"rounded": "rounded",
 	"background": "background"
-};
-
-/***/ }),
-
-/***/ "./components/class/button/button.tsx":
-/*!********************************************!*\
-  !*** ./components/class/button/button.tsx ***!
-  \********************************************/
-/*! exports provided: Button */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button.scss */ "./components/class/button/button.scss");
-/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/benka/go/src/github.com/benka-me/laruche-web/components/class/button/button.tsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const none = "";
-
-String.prototype.spaced = function () {
-  return this + " ";
-};
-
-const Button = props => {
-  const className = _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.btn.spaced() + (props.circular ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.circular.spaced() : none) + (props.color ? props.color.spaced() : none) + (props.design ? props.design.spaced() : none) + (props.fluid ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.fluid.spaced() : none);
-  return __jsx("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 5
-    }
-  }, __jsx("button", {
-    style: props.style,
-    onClick: props.onClick,
-    className: className,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 7
-    }
-  }, props.children));
 };
 
 /***/ }),
@@ -391,7 +392,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var components_class_container_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/class/container/container */ "./components/class/container/container.tsx");
 /* harmony import */ var react_icons_gi__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-icons/gi */ "react-icons/gi");
 /* harmony import */ var react_icons_gi__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_icons_gi__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var components_class_button_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! components/class/button/button */ "./components/class/button/button.tsx");
+/* harmony import */ var components_class_button_Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! components/class/button/Button */ "./components/class/button/Button.tsx");
 var _jsxFileName = "/Users/benka/go/src/github.com/benka-me/laruche-web/components/navigation/navigation.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -639,7 +640,7 @@ const BurgerItem = ({
   const {
     t
   } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_4__["useTranslation"])();
-  return __jsx(components_class_button_button__WEBPACK_IMPORTED_MODULE_11__["Button"], {
+  return __jsx(components_class_button_Button__WEBPACK_IMPORTED_MODULE_11__["default"], {
     style: {
       marginBottom: "10px"
     },

@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import context from "context/context";
 import { Container } from "components/class/container/container";
-import { Button } from "components/class/button/button";
+import { Button } from "components/class/button/Button";
 
 export default () => {
   const { setTitle } = useContext(context);

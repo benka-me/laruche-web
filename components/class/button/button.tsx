@@ -14,17 +14,22 @@ String.prototype.spaced = function(): string {
 };
 
 interface ButtonProps {
+  children: any;
   style?: CSSProperties;
   circular?: boolean;
   link?: boolean;
   color: "warning" | "error" | "info" | "red" | "blue";
   design: "rounded" | "background";
-  onClick: OnClick;
+  onClick?: OnClick;
   fluid?: boolean;
+  type?: "button" | "submit" | "reset";
+  className?: string;
+  disabled?: boolean;
 }
 
-export const Button: FC<ButtonProps> = props => {
+export default (props: ButtonProps) => {
   const className =
+    props.className.spaced() +
     css.btn.spaced() +
     (props.circular ? css.circular.spaced() : none) +
     (props.color ? props.color.spaced() : none) +
@@ -32,7 +37,13 @@ export const Button: FC<ButtonProps> = props => {
     (props.fluid ? css.fluid.spaced() : none);
   return (
     <div>
-      <button style={props.style} onClick={props.onClick} className={className}>
+      <button
+      disabled={props.disabled}
+        style={props.style}
+        onClick={props.onClick}
+        className={className}
+        type={props.type}
+      >
         {props.children}
       </button>
     </div>
