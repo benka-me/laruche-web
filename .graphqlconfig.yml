@@ -1,0 +1,6 @@
+projects:
+  prod:
+    schemaPath: graph/schema.graphql
+    extensions:
+      endpoints:
+        default: http://localhost:8088

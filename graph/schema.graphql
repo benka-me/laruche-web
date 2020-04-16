@@ -1,0 +1,90 @@
+# source: http://localhost:8088
+# timestamp: Thu Apr 16 2020 19:03:33 GMT+0200 (GMT+02:00)
+
+input Auth {
+  Token: String!
+}
+
+type Bee {
+  Author: String!
+  Name: String!
+  PkgName: String!
+  Description: String!
+  Repo: String!
+  Port: Int!
+  License: String!
+  Keywords: [String!]!
+  DevLang: Int!
+  Framework: Framework
+  Rpcs: [Rpc!]!
+}
+
+type BeeDetails {
+  Readme: String!
+}
+
+input BeeReq {
+  Author: String!
+  Name: String!
+  Auth: Auth!
+}
+
+type Framework {
+  Author: String!
+  Name: String!
+}
+
+type FullBee {
+  Bee: Bee!
+  Details: BeeDetails!
+}
+
+type Hive {
+  Author: String!
+  Name: String!
+  Repo: String!
+}
+
+type Home {
+  Bees: [Bee!]!
+  Hives: [Hive!]!
+}
+
+input HomeReq {
+  Token: String!
+}
+
+type LoginRes {
+  Status: Boolean!
+  TokenErr: String!
+}
+
+type Mutation {
+  register(input: RegisterReq!): RegisterRes!
+}
+
+type Query {
+  Login(username: String!, password: String!): LoginRes!
+  GetHome(input: HomeReq!): Home!
+  GetBee(input: BeeReq!): Bee!
+  GetBeeDetails(input: BeeReq!): BeeDetails!
+  GetFullBee(input: BeeReq!): FullBee!
+}
+
+input RegisterReq {
+  email: String!
+  username: String!
+  password: String!
+}
+
+type RegisterRes {
+  Status: Boolean!
+  StatusMessage: String!
+}
+
+type Rpc {
+  Name: String!
+  Input: String!
+  Output: String!
+  Line: String!
+}
