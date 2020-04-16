@@ -1,1 +1,1 @@
-#Web Client for [laruche](https://github.com/benka-me/laruche)
+#Web Client for [Laruche](https://github.com/benka-me/laruche)

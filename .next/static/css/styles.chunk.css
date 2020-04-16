@@ -361,383 +361,6 @@ p {
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3); } }
 
-/* News */
-@media all and (max-width: 800px) {
-  h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 3.1rem; }
-  h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.2rem;
-    font-style: italic; }
-  h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8rem;
-    font-weight: normal; }
-  h4 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.6rem;
-    font-weight: normal; }
-  .main {
-    margin-top: 60px; }
-    .main .title {
-      display: none; }
-  .project-board h2 {
-    padding-top: 1rem; } }
-
-h1 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 2.2rem; }
-
-h2 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1.8rem; }
-
-h3 {
-  font-family: "Amaranth", sans-serif;
-  margin-top: 0px;
-  font-size: 1.2rem; }
-
-h4 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1rem; }
-
-p {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif; }
-
-@media (max-width: 800px) {
-  p {
-    font-size: 13px; } }
-
-.footer {
-  margin: 0;
-  background-color: #496674;
-  position: fixed;
-  bottom: -12px;
-  height: 15px;
-  z-index: 2000; }
-
-.lang {
-  flex: 1 0 60px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center; }
-
-.javascript {
-  margin-left: 2px;
-  padding-bottom: 1px;
-  width: 19px;
-  height: 19px;
-  color: black; }
-
-.go {
-  width: 25px;
-  height: 25px;
-  color: black; }
-
-.python {
-  margin-left: 1px;
-  padding-top: 1px;
-  width: 25px;
-  height: 25px;
-  color: black; }
-
-/* News */
-.framework {
-  flex-basis: 150px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 26px; }
-
-.fa-boxes {
-  height: 26px;
-  width: 20px;
-  margin-right: 4px; }
-
-/* News */
-@media all and (max-width: 800px) {
-  h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 3.1rem; }
-  h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.2rem;
-    font-style: italic; }
-  h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8rem;
-    font-weight: normal; }
-  h4 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.6rem;
-    font-weight: normal; }
-  .main {
-    margin-top: 60px; }
-    .main .title {
-      display: none; }
-  .project-board h2 {
-    padding-top: 1rem; } }
-
-h1 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 2.2rem; }
-
-h2 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1.8rem; }
-
-h3 {
-  font-family: "Amaranth", sans-serif;
-  margin-top: 0px;
-  font-size: 1.2rem; }
-
-h4 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1rem; }
-
-p {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif; }
-
-@media (max-width: 800px) {
-  p {
-    font-size: 13px; } }
-
-.footer {
-  margin: 0;
-  background-color: #496674;
-  position: fixed;
-  bottom: -12px;
-  height: 15px;
-  z-index: 2000; }
-
-.ticket {
-  margin: 14px 0 0 0;
-  border: #bcc8c8 1px solid;
-  border-radius: 3px; }
-
-.beeHeader {
-  display: flex;
-  padding: 0;
-  background-image: linear-gradient(to bottom right, #f4f9fc, #f1f1f1);
-  height: 90px; }
-  @media (max-width: 800px) {
-    .beeHeader {
-      height: 80px; } }
-  .beeHeader .icon {
-    padding-top: 9px;
-    padding-left: 6px;
-    height: 50%;
-    width: auto;
-    color: #474747;
-    border-top-left-radius: 2px; }
-    @media (max-width: 800px) {
-      .beeHeader .icon {
-        padding-top: 5px;
-        padding-left: 3px; } }
-
-.beeTitle {
-  padding: 5px 5px 5px 8px; }
-  .beeTitle .author {
-    font-weight: bold;
-    color: #4e5762; }
-  .beeTitle .name {
-    font-weight: normal;
-    color: #292929; }
-  .beeTitle .beeGit {
-    padding-top: 3px;
-    display: flex;
-    align-items: center; }
-    .beeTitle .beeGit .gitIcon {
-      height: 24px;
-      width: 24px; }
-    .beeTitle .beeGit .gitLink {
-      padding-left: 3px; }
-
-.beeTitle > * {
-  align-items: center; }
-
-.beeBody {
-  padding: 5px 10px 5px 20px; }
-
-.beeFooter {
-  background: #eaeff4;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px 10px 5px 20px; }
-
-.beeFooter > * {
-  height: 27px; }
-
-/* News */
-@media all and (max-width: 800px) {
-  h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 3.1rem; }
-  h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.2rem;
-    font-style: italic; }
-  h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8rem;
-    font-weight: normal; }
-  h4 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.6rem;
-    font-weight: normal; }
-  .main {
-    margin-top: 60px; }
-    .main .title {
-      display: none; }
-  .project-board h2 {
-    padding-top: 1rem; } }
-
-h1 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 2.2rem; }
-
-h2 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1.8rem; }
-
-h3 {
-  font-family: "Amaranth", sans-serif;
-  margin-top: 0px;
-  font-size: 1.2rem; }
-
-h4 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1rem; }
-
-p {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif; }
-
-@media (max-width: 800px) {
-  p {
-    font-size: 13px; } }
-
-.footer {
-  margin: 0;
-  background-color: #496674;
-  position: fixed;
-  bottom: -12px;
-  height: 15px;
-  z-index: 2000; }
-
-.install {
-  display: flex;
-  flex-direction: column; }
-  .install * {
-    flex: 1 0 0; }
-
-.installButton, .installDone {
-  padding: 0 10px 0 10px;
-  border: 3px #002b36 solid;
-  border-radius: 5px;
-  background: #002b36;
-  cursor: copy;
-  text-align: left; }
-
-.installDone {
-  border: 3px solid #b6ffda; }
-
-.copied {
-  margin-top: -24px;
-  font-size: 13px;
-  color: #bcc8c8;
-  text-align: center; }
-
-.copy {
-  color: #bcc8c8;
-  text-align: right;
-  border: #bcc8c8 1px ridge;
-  width: 100px;
-  position: absolute; }
-
-@media all and (max-width: 800px) {
-  h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 3.1rem; }
-  h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.2rem;
-    font-style: italic; }
-  h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8rem;
-    font-weight: normal; }
-  h4 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.6rem;
-    font-weight: normal; }
-  .main {
-    margin-top: 60px; }
-    .main .title {
-      display: none; }
-  .project-board h2 {
-    padding-top: 1rem; } }
-
-h1 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 2.2rem; }
-
-h2 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1.8rem; }
-
-h3 {
-  font-family: "Amaranth", sans-serif;
-  margin-top: 0px;
-  font-size: 1.2rem; }
-
-h4 {
-  font-family: "Amaranth", sans-serif;
-  font-size: 1rem; }
-
-p {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif; }
-
-@media (max-width: 800px) {
-  p {
-    font-size: 13px; } }
-
-.footer {
-  margin: 0;
-  background-color: #496674;
-  position: fixed;
-  bottom: -12px;
-  height: 15px;
-  z-index: 2000; }
-
-.link h2, .namespace h2 {
-  margin: 0;
-  padding: 0;
-  text-decoration: underline;
-  color: #4479b6; }
-  @media (max-width: 800px) {
-    .link h2, .namespace h2 {
-      font-size: 23px; } }
-
-.namespace {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: center; }
-  .namespace * {
-    flex: 0 0 1; }
-  .namespace h2 {
-    padding-left: 3px;
-    margin: 0; }
-  @media (max-width: 800px) {
-    .namespace {
-      padding-left: 0px; } }
-
 /*!
  * # Semantic UI 2.4.1 - Container
  * http://github.com/semantic-org/semantic-ui/
@@ -1036,6 +659,138 @@ body {
 @media (max-width: 800px) {
   .main {
     margin-top: 60px; } }
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.1rem; }
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.2rem;
+    font-style: italic; }
+  h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal; }
+  h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal; }
+  .main {
+    margin-top: 60px; }
+    .main .title {
+      display: none; }
+  .project-board h2 {
+    padding-top: 1rem; } }
+
+h1 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2.2rem; }
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1.8rem; }
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0px;
+  font-size: 1.2rem; }
+
+h4 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 1rem; }
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; }
+
+@media (max-width: 800px) {
+  p {
+    font-size: 13px; } }
+
+.footer {
+  margin: 0;
+  background-color: #496674;
+  position: fixed;
+  bottom: -12px;
+  height: 15px;
+  z-index: 2000; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292e;
+  background-color: #fff; }
+
+.app {
+  margin: 2rem; }
+
+a {
+  color: #08c; }
+
+code {
+  background: #eee;
+  padding: 0.1rem;
+  font-family: "Menlo";
+  font-size: 13px;
+  color: #ff00aa; }
+
+input {
+  padding: 0.5rem;
+  font-size: 16px;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #ccc; }
+
+input:focus {
+  border-color: #007eff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+  outline: none; }
+
+input.error {
+  border-color: #b01612;
+  background-color: white; }
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem; }
+
+.inputFeedback {
+  color: red;
+  margin-top: 0.25rem; }
+
+button {
+  max-width: 150px;
+  margin: 20px 0;
+  padding: 12px 20px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #08c;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none; }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important; }
+
+button + button {
+  margin-left: 0.5rem; }
+
+button.outline {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  color: #555; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
