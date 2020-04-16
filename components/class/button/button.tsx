@@ -29,7 +29,7 @@ interface ButtonProps {
 
 export default (props: ButtonProps) => {
   const className =
-    props.className.spaced() +
+    props.className + " " +
     css.btn.spaced() +
     (props.circular ? css.circular.spaced() : none) +
     (props.color ? props.color.spaced() : none) +

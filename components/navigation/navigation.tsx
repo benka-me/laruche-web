@@ -11,7 +11,7 @@ import { OnClick } from "types/types";
 import { TFunction } from "i18next";
 import { Container } from "components/class/container/container";
 import { GiBee } from "react-icons/gi";
-import Button from "components/class/button/button";
+import Button from "components/class/button/Button"
 
 type Link = {
   name: string;

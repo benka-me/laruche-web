@@ -196,7 +196,7 @@ String.prototype.spaced = function () {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (props => {
-  const className = props.className.spaced() + _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.btn.spaced() + (props.circular ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.circular.spaced() : none) + (props.color ? props.color.spaced() : none) + (props.design ? props.design.spaced() : none) + (props.fluid ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.fluid.spaced() : none);
+  const className = props.className + " " + _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.btn.spaced() + (props.circular ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.circular.spaced() : none) + (props.color ? props.color.spaced() : none) + (props.design ? props.design.spaced() : none) + (props.fluid ? _button_scss__WEBPACK_IMPORTED_MODULE_1___default.a.fluid.spaced() : none);
   return __jsx("div", {
     __self: undefined,
     __source: {
