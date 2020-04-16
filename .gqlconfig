@@ -1,5 +1,13 @@
 {
-    schemas: {
-        files : "graph/*.gql",
-    },
+  schema: {
+    files: 'graph/schema.graphql',
+  },
+  query: {
+    files: [
+      {
+        match: 'graph/**/*.gql',
+        parser: 'QueryParser',
+      },
+    ]
+  }
 }
