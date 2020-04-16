@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "gql": "graphql-codegen --config codegen.yml",
+    "gqlgen": "graphql-codegen --config codegen.yml",
     "tsm": "tsm components --includePaths sass -w"
   },
   "dependencies": {
@@ -43,6 +43,7 @@
     "@graphql-codegen/typescript": "1.12.2",
     "@graphql-codegen/typescript-operations": "1.12.2",
     "@graphql-codegen/typescript-react-apollo": "1.12.2",
+    "@playlyfe/gql": "^2.6.2",
     "@types/node": "^13.9.3",
     "@types/react": "^16.9.25",
     "typed-scss-modules": "^1.3.0",
