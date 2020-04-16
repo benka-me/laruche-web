@@ -30,7 +30,7 @@ module.exports = {"main":"main","title":"title","project-board":"project-board",
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587045490823");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587066959557");
           });
       }
     }
@@ -68,7 +68,7 @@ module.exports = {"main":"main","title":"title","project-board":"project-board",
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587045491045");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587066959831");
           });
       }
     }
@@ -106,7 +106,7 @@ module.exports = {"container":"container","grid":"grid","relaxed":"relaxed","ver
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587045490836");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587066959566");
           });
       }
     }
@@ -114,10 +114,10 @@ module.exports = {"container":"container","grid":"grid","relaxed":"relaxed","ver
 
 /***/ }),
 
-/***/ "./components/login/form.scss":
-/*!************************************!*\
-  !*** ./components/login/form.scss ***!
-  \************************************/
+/***/ "./components/class/form/form.scss":
+/*!*****************************************!*\
+  !*** ./components/class/form/form.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -144,7 +144,7 @@ module.exports = {"main":"main","title":"title","project-board":"project-board",
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587045620301");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587072013972");
           });
       }
     }
@@ -182,7 +182,7 @@ module.exports = {"main":"main","title":"title","project-board":"project-board",
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587045491084");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587066959929");
           });
       }
     }
@@ -220,7 +220,7 @@ module.exports = {"main":"main","title":"title","project-board":"project-board",
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1587045490830");
+            injectCss(link, link.href.split("?")[0] + "?unix=1587066959563");
           });
       }
     }

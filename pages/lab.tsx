@@ -1,30 +1,29 @@
-import { useContext, useEffect } from "react";
-import context from "context/context";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import Button from "components/class/button/Button";
+import {
+  LoginQueryVariables,
+  LoginDocument,
+  LoginQueryResult,
+  QueryLoginArgs,
+  RegisterDocument,
+  RegisterMutationVariables,
+  GetHomeDocument,
+} from "graph/graphql";
+import { useLazyQuery, QueryLazyOptions } from "@apollo/react-hooks";
+import { useState, useEffect } from "react";
 import { Container } from "components/class/container/container";
-import { SignUp } from "components/class/form/SignUp";
+import { Lazy } from "types/types";
 
-const Wrap = ({ title, children }) => (
-  <div>
-    <h4 style={{ marginBottom: "3px", paddingTop: "3px" }}>{title}</h4>
-    <div
-      style={{
-        margin: "4px",
-        border: "1px solid greenyellow"
-      }}
-    >
-      {children}
-    </div>
-  </div>
-);
+
 export default () => {
-  const { setTitle } = useContext(context);
-  useEffect(() => {
-    setTitle(<h1>Lab</h1>);
-    return () => {};
-  }, []);
+  const [
+    tryLogin,
+    { error, loading, data },
+  ]: Lazy<LoginQueryVariables, LoginQueryResult> = useLazyQuery(LoginDocument);
+
   return (
     <Container>
-      <SignUp/>
     </Container>
   );
 };

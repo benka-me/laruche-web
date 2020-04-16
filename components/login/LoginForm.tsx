@@ -1,89 +1,80 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
-import css from "./form.scss";
+import {
+  LoginQueryVariables,
+  LoginDocument,
+  LoginQueryResult,
+} from "graph/graphql";
+import { useLazyQuery } from "@apollo/react-hooks";
+import { Lazy } from "types/types";
+import Input from "components/class/form/Input";
 import Button from "components/class/button/Button";
+import { Container } from "components/class/container/container";
 
+type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
+const initVars: LoginQueryVariables = { username: "", password: "" };
 export default () => {
-  return <div>
+  const [tryLogin, { error, loading, data }]: LazyLogin = useLazyQuery(
+    LoginDocument
+  );
+
+  if (error) return <p>Error...</p>;
+  if (loading) return <p>Loading ...</p>;
+  if (data) {
+    return (
+      <div>
+        <p>{data.Login.TokenErr}</p>
+      </div>
+    );
+  }
+  return (
+    <Container>
       <Formik
-      initialValues={{ email: "" }}
-      onSubmit={async values => {
-        await new Promise(resolve => setTimeout(resolve, 500));
-        alert(JSON.stringify(values, null, 2));
-      }}
-      validationSchema={Yup.object().shape({
-        email: Yup.string()
-          .email()
-          .required("Required")
-      })}
-    >
-      {props => {
-        const {
-          values,
-          touched,
-          errors,
-          dirty,
-          isSubmitting,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-          handleReset
-        } = props;
-        return (
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email" style={{ display: "block" }}>
-              Email
-            </label>
-            <input
-              id="email"
-              placeholder="Enter your email"
-              type="text"
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={
-                errors.email && touched.email
-                  ? "error"
-                  : ""
-              }
-            />
-            {errors.email && touched.email && (
-              <div className={css.inputFeedback}>{errors.email}</div>
-            )}
+        initialValues={initVars}
+        onSubmit={(values: LoginQueryVariables) => {
+          tryLogin({ variables: values });
+        }}
+        validationSchema={Yup.object().shape({
+          password: Yup.string().required("Required"),
+          username: Yup.string().required("Required"),
+        })}
+      >
+        {(props) => {
+          const { isSubmitting, handleSubmit } = props;
+          return (
+            <form onSubmit={handleSubmit}>
+              <Input name="username" placeholder="Username" type="text" {...props} />
+              <Input name="password" type="password" {...props} />
 
-            <Button
-              type="button"
-              className={css.outline}
-              onClick={handleReset}
-              disabled={!dirty || isSubmitting}
-              color="blue"
-              design="rounded"
-            >
-              Reset
-            </Button>
-            <Button color="info" design="rounded" type="submit" disabled={isSubmitting}>
-              Submit
-            </Button>
+              <Button
+                color="info"
+                design="rounded"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                Submit
+              </Button>
 
-            <DisplayFormikState {...props} />
-          </form>
-        );
-      }}
-    </Formik>
-  </div>;
+              <DisplayFormikState {...props} />
+            </form>
+          );
+        }}
+      </Formik>
+    </Container>
+  );
 };
 
-export const DisplayFormikState = props =>
-  <div style={{ margin: '1rem 0' }}>
-    <h3 style={{ fontFamily: 'monospace' }} />
+export const DisplayFormikState = (props) => (
+  <div style={{ margin: "1rem 0" }}>
+    <h3 style={{ fontFamily: "monospace" }} />
     <pre
       style={{
-        background: '#f6f8fa',
-        fontSize: '.65rem',
-        padding: '.5rem',
+        background: "#f6f8fa",
+        fontSize: ".65rem",
+        padding: ".5rem",
       }}
     >
-      <strong>props</strong> ={' '}
-      {JSON.stringify(props, null, 2)}
+      <strong>props</strong> = {JSON.stringify(props, null, 2)}
     </pre>
-  </div>;
+  </div>
+);

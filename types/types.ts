@@ -1,5 +1,6 @@
 import router from "next/router";
 
+export type Lazy<V,R> = [(T: Record<string, V>) => void, R];
 export class Namespace {
   author: string;
   name: string;
