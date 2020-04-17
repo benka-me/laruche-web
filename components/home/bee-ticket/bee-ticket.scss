@@ -1,5 +1,5 @@
 /* News */
-@import "../../../sass/lib.scss";
+@import "sass/lib.scss";
 
 .ticket {
   margin: 14px 0 0 0;
@@ -7,23 +7,24 @@
   border-radius: 3px;
 }
 
-$size-icon: 52px;
+$size-icon: 30px;
 .beeHeader {
   display: flex;
   padding: 0;
   background-image: linear-gradient(to bottom right, #f4f9fc, #f1f1f1);
   height: 90px;
-  @media #{$mobileOnly} {
+  @media #{$mobile} {
     height: 80px;
   }
+
   .icon {
-    padding-top: 9px;
+    padding-top: 7px;
     padding-left: 6px;
-    height: 50%;
+    height: $size-icon;
     width: auto;
     color: $color-grey-dark;
     border-top-left-radius: 2px;
-    @media #{$mobileOnly} {
+    @media #{$mobile} {
       padding-top: 5px;
       padding-left: 3px;
     }
@@ -71,9 +72,4 @@ $size-icon: 52px;
 
 .beeFooter > * {
   height: 27px;
-}
-
-@media #{$desktopOnly} {
-}
-@media #{$mobileOnly} {
 }
