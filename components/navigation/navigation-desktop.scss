@@ -2,14 +2,12 @@
 @import "components/class/button/button.scss";
 
 /* Navigation */
-@media #{$mobileOnly} {
+@media #{$mobile} {
   .navbar {
     display: none;
   }
 }
 
-@media #{$desktopOnly} {
-}
 .navbar {
   background-color: #f18787e5;
   left: 0;

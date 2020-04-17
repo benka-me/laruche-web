@@ -36,7 +36,7 @@ export default (props: ButtonProps) => {
     (props.design ? props.design.spaced() : none) +
     (props.fluid ? css.fluid.spaced() : none);
   return (
-    <div>
+    <>
       <button
       disabled={props.disabled}
         style={props.style}
@@ -46,6 +46,6 @@ export default (props: ButtonProps) => {
       >
         {props.children}
       </button>
-    </div>
+    </>
   );
 };

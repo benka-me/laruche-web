@@ -1,6 +1,10 @@
 @import "sass/lib.scss";
 
 $margin: 0;
+
+a {
+  text-decoration: none;
+}
 .link {
   h2 {
     margin: $margin;

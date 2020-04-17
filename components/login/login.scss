@@ -1,0 +1,35 @@
+@import "sass/lib.scss";
+
+.loginForm {
+  margin-top: 15px;
+  background-color: $color-grey-extra-light;
+  height: 500px;
+  .form {
+      padding: 20px 100px 20px 100px;
+    input + button {
+      margin-top: 0.8rem;
+    }
+  }
+  .pane {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/65fb144d-b5bb-458c-8aa9-6002738e69f6/dbjdi70-95003c3d-8d3a-4db6-b9c8-1c900af73630.png/v1/fill/w_1024,h_768,q_80,strp/inside_the_hive_by_tiffrmc720_dbjdi70-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6IlwvZlwvNjVmYjE0NGQtYjViYi00NThjLThhYTktNjAwMjczOGU2OWY2XC9kYmpkaTcwLTk1MDAzYzNkLThkM2EtNGRiNi1iOWM4LTFjOTAwYWY3MzYzMC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.q3T6rvLpaJOM--c8xBE_DexKnE_sPduMKXqZpyESY4A");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  @media only screen and #{$mobile} {
+    display: flex;
+  }
+  @media only screen and #{$desktop} {
+    border-radius: 9px;
+    display: flex;
+    .form {
+      width: 50%;
+    }
+    .pane {
+      border-top-right-radius: 9px;
+      border-bottom-right-radius: 9px;
+      width: 50%;
+      height: 100%;
+    }
+  }
+}

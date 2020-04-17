@@ -9,8 +9,8 @@ import { useLazyQuery } from "@apollo/react-hooks";
 import { Lazy } from "types/types";
 import Input from "components/class/form/Input";
 import Button from "components/class/button/Button";
-import { Container } from "components/class/container/container";
 import FormContainer from "components/class/form/FormContainer";
+import css from "./login.scss";
 
 type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
 const initVars: LoginQueryVariables = { username: "", password: "" };
@@ -30,38 +30,51 @@ export default () => {
   }
   return (
     <FormContainer>
-      <Formik
-        initialValues={initVars}
-        onSubmit={(values: LoginQueryVariables) => {
-          tryLogin({ variables: values });
-        }}
-        validationSchema={Yup.object().shape({
-          password: Yup.string().required("Required"),
-          username: Yup.string().required("Required"),
-        })}
-      >
-        {(props) => {
-          const { isSubmitting, handleSubmit } = props;
-          return (
-            <form onSubmit={handleSubmit}>
-              <Input name="username" placeholder="Username" type="text" {...props} />
-              <Input name="password" type="password" {...props} />
+      <div className={css.loginForm}>
+        <div className={css.form}>
+          <h1>Sign in</h1>
+          <p>---------- or ---------</p>
+          <a href="/register">Register</a>
+        <Formik
+          initialValues={initVars}
+          onSubmit={(values: LoginQueryVariables) => {
+            tryLogin({ variables: values });
+          }}
+          validationSchema={Yup.object().shape({
+            password: Yup.string().required("Required"),
+            username: Yup.string().required("Required"),
+          })}
+        >
+          {(props) => {
+            const { isSubmitting, handleSubmit } = props;
+            return (
+              <form onSubmit={handleSubmit}>
+                <Input
+                  name="username"
+                  placeholder="Username"
+                  type="text"
+                  {...props}
+                />
+                <Input name="password" type="password" {...props} />
 
-              <Button
-                color="info"
-                design="rounded"
-                type="submit"
-                disabled={isSubmitting}
-                fluid
-              >
-                Submit
-              </Button>
+                <Button
+                  color="info"
+                  design="rounded"
+                  type="submit"
+                  disabled={isSubmitting}
+                  fluid
+                >
+                  Login
+                </Button>
 
-              <DisplayFormikState {...props} />
-            </form>
-          );
-        }}
-      </Formik>
+                <DisplayFormikState {...props} />
+              </form>
+            );
+          }}
+        </Formik>
+        </div>
+        <div className={css.pane}></div>
+      </div>
     </FormContainer>
   );
 };

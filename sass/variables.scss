@@ -62,12 +62,30 @@ $border-radius: 4px;
 
 //MEDIA QUERIES
 
-$limit-mobile: 600px;
-$limit-tablet: 800px;
+$mobile: (max-width: 991px);
+$desktop: (min-width: 992px);
 
 $mobileOnly: (
-  max-width: $limit-tablet
+  max-width: 767px,
 );
+
+$tabletOnly: (
+    min-width: 768px,
+  )
+  and
+  (
+    max-width: 991px,
+  );
+
 $desktopOnly: (
-  min-width: $limit-tablet + 1
+    min-width: 992px,
+  )
+  and
+  (
+    max-width: 1199px,
+  );
+$largeDesktop: (
+  (
+    min-width: 1200px,
+  )
 );

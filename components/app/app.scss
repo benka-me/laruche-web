@@ -15,7 +15,7 @@ body {
 .main {
   margin-top: $size-nav-height + 10px;
 }
-@media #{$mobileOnly} {
+@media #{$tabletOnly} and #{$mobileOnly} {
   .main {
     margin-top: $size-nav-height;
   }

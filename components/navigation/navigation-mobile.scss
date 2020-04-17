@@ -1,21 +1,25 @@
 @import "sass/lib.scss";
 
 /* Navigation */
-@media #{$desktopOnly} {
-  .mobile{display: none;}
-  .back  {display: none;}
+@media only screen and #{$desktop} {
+  .mobile {
+    display: none;
+  }
+  .back {
+    display: none;
+  }
 }
 
-@media #{$mobileOnly}{
+@media only screen and #{$mobile} {
   .back {
-    position:fixed;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: $size-nav-mobile-height;
     background-color: $color-grey-light;
     z-index: 3;
     .title {
-      margin-top:13px;
+      margin-top: 13px;
       margin-left: 15px;
       * {
         padding: 0;
@@ -102,14 +106,13 @@
     margin-bottom: 10px;
   }
   .circular.button.bm-item.selected {
-     background: $color-primary-background-inverted;
-     border: $color-blue 1px solid;
-     color: $color-blue;
-   }
+    background: $color-primary-background-inverted;
+    border: $color-blue 1px solid;
+    color: $color-blue;
+  }
 
   /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
-
 }
