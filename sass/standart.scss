@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'variables.scss';
 
 a {
   text-decoration: none !important;
@@ -26,7 +26,7 @@ h4 {
 }
 
 p {
-  font-size: 16px;
+  font-size: $font-size;
   font-family: $font-family;
 }
 

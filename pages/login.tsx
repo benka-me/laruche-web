@@ -1,7 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect} from "react";
 import context from "context/context";
 import { Container } from "components/class/container/container";
-import LoginForm from "components/login/LoginForm";
+import LandingForm from "components/login/LandingForm";
 
 export default () => {
   const { setTitle } = useContext(context);
@@ -11,7 +11,7 @@ export default () => {
   }, []);
   return (
     <Container>
-      <LoginForm></LoginForm>
+      <LandingForm/>
     </Container>
   );
 };

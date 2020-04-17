@@ -1,6 +1,17 @@
 @import "sass/lib.scss";
 
-.loginForm {
+.toggle {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    button {
+        margin-left: 10px;
+        color: $color-link;
+        font-size: $font-size;
+    }
+}
+
+.landingForm {
   margin-top: 15px;
   background-color: $color-grey-extra-light;
   height: 500px;

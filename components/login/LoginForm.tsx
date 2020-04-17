@@ -9,12 +9,15 @@ import { useLazyQuery } from "@apollo/react-hooks";
 import { Lazy } from "types/types";
 import Input from "components/class/form/Input";
 import Button from "components/class/button/Button";
-import FormContainer from "components/class/form/FormContainer";
 import css from "./login.scss";
+import Toggle from "components/login/Toggle";
 
 type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
 const initVars: LoginQueryVariables = { username: "", password: "" };
-export default () => {
+type Props = {
+  toggle : () => void,
+}
+export default ({toggle}: Props) => {
   const [tryLogin, { error, loading, data }]: LazyLogin = useLazyQuery(
     LoginDocument
   );
@@ -29,53 +32,49 @@ export default () => {
     );
   }
   return (
-    <FormContainer>
-      <div className={css.loginForm}>
-        <div className={css.form}>
-          <h2>Sign in</h2>
-          <p>---------- or ---------</p>
-          <a href="/register">Register</a>
-        <Formik
-          initialValues={initVars}
-          onSubmit={(values: LoginQueryVariables) => {
-            tryLogin({ variables: values });
-          }}
-          validationSchema={Yup.object().shape({
-            password: Yup.string().required("Required"),
-            username: Yup.string().required("Required"),
-          })}
-        >
-          {(props) => {
-            const { isSubmitting, handleSubmit } = props;
-            return (
-              <form onSubmit={handleSubmit}>
-                <Input
-                  name="username"
-                  placeholder="Username"
-                  type="text"
-                  {...props}
-                />
-                <Input name="password" type="password" {...props} />
+    <div className={css.form}>
+      <h2>Login</h2>
+      <Formik
+        initialValues={initVars}
+        onSubmit={(values: LoginQueryVariables) => {
+          tryLogin({ variables: values });
+        }}
+        validationSchema={Yup.object().shape({
+          password: Yup.string().required("Required"),
+          username: Yup.string().required("Required"),
+        })}
+      >
+        {(props) => {
+          const { isSubmitting, handleSubmit } = props;
+          return (
+            <form onSubmit={handleSubmit}>
+              <Input
+                name="username"
+                placeholder="Username"
+                type="text"
+                {...props}
+              />
+              <Input name="password" type="password" {...props} />
 
-                <Button
-                  color="info"
-                  design="rounded"
-                  type="submit"
-                  disabled={isSubmitting}
-                  fluid
-                >
-                  Login
-                </Button>
+              <Button
+                color="info"
+                design="rounded"
+                type="submit"
+                disabled={isSubmitting}
+                fluid
+              >
+                Login
+              </Button>
+               <Toggle toggle={toggle} name="register">
+                 <p>If you are new: </p>
+               </Toggle>
 
-                <DisplayFormikState {...props} />
-              </form>
-            );
-          }}
-        </Formik>
-        </div>
-        <div className={css.pane}></div>
-      </div>
-    </FormContainer>
+              <DisplayFormikState {...props} />
+            </form>
+          );
+        }}
+      </Formik>
+    </div>
   );
 };
 
