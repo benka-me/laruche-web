@@ -1,13 +1,4 @@
 node_modules
-yarn-error.log
+yarn-rror.log
 next/
 .next/
-.next/build-manifest.json
-.next/build-manifest.json
-.next/server/pages-manifest.json
-.next/static/chunks/styles.js
-.next/static/chunks/styles.js.map
-.next/static/css/styles.chunk.css
-.next/static/css/styles.chunk.css.map
-.next/static/runtime/webpack.js
-.next/static/runtime/webpack.js.map
