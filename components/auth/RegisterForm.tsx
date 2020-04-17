@@ -4,20 +4,26 @@ import {
   LoginQueryVariables,
   LoginDocument,
   LoginQueryResult,
+  RegisterMutationVariables,
 } from "graph/graphql";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { Lazy } from "types/types";
 import Input from "components/class/form/Input";
 import Button from "components/class/button/Button";
 import css from "./login.scss";
-import Toggle from "components/login/Toggle";
+import Toggle from "components/auth/Toggle";
 
 type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
-const initVars: LoginQueryVariables = { username: "", password: "" };
+const initVars: RegisterMutationVariables = {
+  username: "",
+  password: "",
+  email: "",
+  password2: "",
+};
 type Props = {
-  toggle : () => void,
-}
-export default ({toggle}: Props) => {
+  toggle: () => void;
+};
+export default ({ toggle }: Props) => {
   const [tryLogin, { error, loading, data }]: LazyLogin = useLazyQuery(
     LoginDocument
   );
@@ -33,15 +39,25 @@ export default ({toggle}: Props) => {
   }
   return (
     <div className={css.form}>
-      <h2>Login</h2>
+      <h2>Register in</h2>
       <Formik
         initialValues={initVars}
         onSubmit={(values: LoginQueryVariables) => {
           tryLogin({ variables: values });
         }}
         validationSchema={Yup.object().shape({
+          username: Yup.string()
+            .matches(/^([a-z]|-)+$/, "lowcase and midde `-` dash only")
+            .required(),
           password: Yup.string().required("Required"),
-          username: Yup.string().required("Required"),
+          password2: Yup.string()
+            .required("Required")
+            .test("passwords-match", "Passwords must match", function(value) {
+              return this.parent.password === value;
+            }),
+          email: Yup.string()
+            .email()
+            .required(),
         })}
       >
         {(props) => {
@@ -54,7 +70,25 @@ export default ({toggle}: Props) => {
                 type="text"
                 {...props}
               />
-              <Input name="password" type="password" {...props} />
+              <Input
+                name="email"
+                placeholder="Your email address"
+                type="text"
+                {...props}
+              />
+              <Input
+                name="password"
+                placeholder="Password"
+                type="password"
+                {...props}
+              />
+              <Input
+                label="confirm password"
+                name="password2"
+                placeholder="Confirm your password"
+                type="password"
+                {...props}
+              />
 
               <Button
                 color="info"
@@ -63,11 +97,11 @@ export default ({toggle}: Props) => {
                 disabled={isSubmitting}
                 fluid
               >
-                Login
+                Register
               </Button>
-               <Toggle toggle={toggle} name="register">
-                 <p>If you are new: </p>
-               </Toggle>
+              <Toggle toggle={toggle} name="login">
+                <p>Already registered?</p>
+              </Toggle>
 
               <DisplayFormikState {...props} />
             </form>
