@@ -4,20 +4,31 @@ import Head from "next/head";
 import App from "components/app/app";
 
 class Wrapper extends NextApp {
+  state = {
+    mounted: false,
+    token: "",
+  };
+  componentDidMount() {
+    this.setState({ token: localStorage.getItem("auth"), mounted: true });
+  }
   render() {
     const { Component, pageProps } = this.props;
-    return (
-      <div>
+    if (this.state.mounted) {
+      return (
         <div>
-          <Head>
-            <title>hive of service</title>
-          </Head>
+          <div>
+            <Head>
+              <title>hive of service</title>
+            </Head>
+          </div>
+          <App token={this.state.token}>
+            <Component {...pageProps} />
+          </App>
         </div>
-        <App>
-          <Component {...pageProps} />
-        </App>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 export default Wrapper;

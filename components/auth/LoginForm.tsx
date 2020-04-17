@@ -11,6 +11,9 @@ import Input from "components/class/form/Input";
 import Button from "components/class/button/Button";
 import css from "./login.scss";
 import Toggle from "components/auth/Toggle";
+import { useEffect, useContext } from "react";
+import context from "context/context";
+import router from "next/router"
 
 type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
 const initVars: LoginQueryVariables = { username: "", password: "" };
@@ -18,9 +21,23 @@ type Props = {
   toggle : () => void,
 }
 export default ({toggle}: Props) => {
+  const {login, setLogin}  = useContext(context)
   const [tryLogin, { error, loading, data }]: LazyLogin = useLazyQuery(
     LoginDocument
   );
+  useEffect(() => {
+    if (login) {
+      router.push(router.pathname)
+    }
+  })
+
+  useEffect(() => {
+    if (data && data.Login.Status) {
+      setLogin(true)
+      localStorage.setItem("auth", data.Login.TokenErr)
+      router.push(router.pathname)
+    }
+  }, [data])
 
   if (error) return <p>Error...</p>;
   if (loading) return <p>Loading ...</p>;

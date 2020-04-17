@@ -22,6 +22,6 @@ export const getAge = (iso: string) =>  {
 };
 
 export const logout = (e: React.MouseEvent, setLogin: (b: boolean) => void) => {
-    localStorage.removeItem(process.env.TOKEN_KEY);
+    localStorage.removeItem("auth");
     setLogin(false);
 };

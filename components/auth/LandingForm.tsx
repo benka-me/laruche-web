@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 
 export default () => {
-  const [bool, setBool] = useState(false);
+  const [bool, setBool] = useState(true);
 
   return (
     <FormContainer>
