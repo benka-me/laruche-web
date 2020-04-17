@@ -10,6 +10,7 @@ import { Lazy } from "types/types";
 import Input from "components/class/form/Input";
 import Button from "components/class/button/Button";
 import { Container } from "components/class/container/container";
+import FormContainer from "components/class/form/FormContainer";
 
 type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
 const initVars: LoginQueryVariables = { username: "", password: "" };
@@ -28,7 +29,7 @@ export default () => {
     );
   }
   return (
-    <Container>
+    <FormContainer>
       <Formik
         initialValues={initVars}
         onSubmit={(values: LoginQueryVariables) => {
@@ -51,6 +52,7 @@ export default () => {
                 design="rounded"
                 type="submit"
                 disabled={isSubmitting}
+                fluid
               >
                 Submit
               </Button>
@@ -60,7 +62,7 @@ export default () => {
           );
         }}
       </Formik>
-    </Container>
+    </FormContainer>
   );
 };
 

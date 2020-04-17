@@ -5,3 +5,4 @@ export const footer: string;
 export const error: string;
 export const inputFeedback: string;
 export const outline: string;
+export const formContainer: string;
