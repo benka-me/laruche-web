@@ -9,7 +9,7 @@ export default ({toggle, name, children}:Props) => {
     return (
         <div className={css.toggle}>
           {children}
-          <button>{name}</button>
+          <button onClick={toggle}>{name}</button>
         </div>
     )
 }
