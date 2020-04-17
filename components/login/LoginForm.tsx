@@ -32,7 +32,7 @@ export default () => {
     <FormContainer>
       <div className={css.loginForm}>
         <div className={css.form}>
-          <h1>Sign in</h1>
+          <h2>Sign in</h2>
           <p>---------- or ---------</p>
           <a href="/register">Register</a>
         <Formik
