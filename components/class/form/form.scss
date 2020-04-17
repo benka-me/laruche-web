@@ -25,6 +25,10 @@ input.error {
   background-color: white;
 }
 
+input + label {
+  margin-top: 7px;
+}
+
 label {
   font-weight: bold;
   display: block;

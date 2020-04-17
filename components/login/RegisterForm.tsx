@@ -14,7 +14,7 @@ import css from "./login.scss";
 import Toggle from "components/login/Toggle";
 
 type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
-const initVars: RegisterMutationVariables = { username: "", password: "", email: "", password2};
+const initVars: RegisterMutationVariables = { username: "", password: "", email: "", password2: ""};
 type Props = {
   toggle : () => void,
 }
@@ -41,9 +41,11 @@ export default ({toggle}: Props) => {
             tryLogin({ variables: values });
           }}
           validationSchema={Yup.object().shape({
-            username: Yup.string().required("Required").matches(/[a-z]/, "lowcase and midde `-` dash only"),
+            username: Yup.string().matches(/^([a-z]|-)+$/, "lowcase and midde `-` dash only"),
             password: Yup.string().required("Required"),
-            password2: Yup.string().required("Required"),
+            password2: Yup.string().required("Required").test('passwords-match', 'Passwords must match', function(value) {
+              return this.parent.password === value;
+            }),
             email: Yup.string().email().required(),
           })}
         >
@@ -59,7 +61,7 @@ export default ({toggle}: Props) => {
                 />
                 <Input name="email" placeholder="Your email address" type="text" {...props} />
                 <Input name="password" placeholder="Password" type="password" {...props} />
-                <Input name="password2" placeholder="Confirm your password" type="password" {...props} />
+                <Input label="confirm password" name="password2" placeholder="Confirm your password" type="password" {...props} />
 
                 <Button
                   color="info"

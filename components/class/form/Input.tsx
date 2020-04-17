@@ -4,6 +4,7 @@ import css from "components/class/form/form.scss";
 interface Values {}
 
 interface Props extends FormikProps<Values> {
+  label?: string;
   name: string;
   type: "password" | "text";
   placeholder?: string;
@@ -25,7 +26,7 @@ export default (props: Props) => {
   return (
     <>
       <label htmlFor={name} style={{ display: "block" }}>
-          {name}
+          {props.label ? props.label : name}
       </label>
       <input
         id={name}

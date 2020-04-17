@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "gqlgen": "graphql-codegen --config codegen.yml",
-    "tsm": "tsm components --includePaths sass -w",
-    "schema": "graphql get-schema --project prod"
+    "gql": "graphql get-schema --project prod && graphql-codegen --config codegen.yml",
+    "tsm": "tsm components --includePaths sass -w"
   },
   "dependencies": {
     "@apollo/react-common": "^3.1.3",

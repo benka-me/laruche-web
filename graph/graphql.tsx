@@ -128,6 +128,7 @@ export type RegisterReq = {
   email: Scalars['String'],
   username: Scalars['String'],
   password: Scalars['String'],
+  password2: Scalars['String'],
 };
 
 export type RegisterRes = {
@@ -147,7 +148,8 @@ export type Rpc = {
 export type RegisterMutationVariables = {
   email: Scalars['String'],
   username: Scalars['String'],
-  password: Scalars['String']
+  password: Scalars['String'],
+  password2: Scalars['String']
 };
 
 
@@ -244,8 +246,8 @@ export type GetBeeDetailsQuery = (
 
 
 export const RegisterDocument = gql`
-    mutation Register($email: String!, $username: String!, $password: String!) {
-  register(input: {email: $email, username: $username, password: $password}) {
+    mutation Register($email: String!, $username: String!, $password: String!, $password2: String!) {
+  register(input: {email: $email, username: $username, password: $password, password2: $password2}) {
     Status
     StatusMessage
   }
