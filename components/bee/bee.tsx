@@ -25,6 +25,7 @@ const BeePage: FC<{ namespace: Namespace }> = ({ namespace }) => {
     setTitle(<NamespaceLink namespace={namespace} bee={current as Bee} />);
   }, [current]);
 
+
   const qVars = {
     token: "fake token",
     author,
