@@ -9,7 +9,7 @@ export default function createApolloClient(initialState, ctx) {
   return new ApolloClient({
     ssrMode: true,
     link: new HttpLink({
-      uri: 'http://192.168.1.96:8088', // Server URL (must be absolute)
+      uri: 'http://15.188.11.184:8088', // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch,
     }),
