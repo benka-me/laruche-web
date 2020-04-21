@@ -6,12 +6,15 @@ import css from "./framework.scss";
 interface Props {
   framework: Framework;
 }
-export default ({ framework }: Props) => (
+export default ({ framework }: Props) => {
+  if (!framework) return null
+  return (
   <div className={css.framework}>
     <FaBoxes className={css.faBoxes} />
     {name === undefined ? <Void /> : <Named name={framework.Name} />}
   </div>
 );
+  }
 
 const Void = () => (
   <div>

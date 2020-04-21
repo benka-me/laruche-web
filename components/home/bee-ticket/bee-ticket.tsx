@@ -56,7 +56,7 @@ const BeeBody: FC<{ bee: Bee }> = ({ bee }) => (
 );
 const BeeFooter: FC<{ bee: Bee }> = ({ bee }) => (
   <div className={beeFooter}>
-    <FrameworkComp framework={bee.Framework} />
+    <FrameworkComp framework={bee?.Framework} />
     <Lang lang={bee.DevLang} />
   </div>
 );

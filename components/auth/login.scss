@@ -1,14 +1,14 @@
 @import "sass/lib.scss";
 
 .toggle {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    button {
-        margin-left: 10px;
-        color: $color-link;
-        font-size: $font-size;
-    }
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  button {
+    margin-left: 10px;
+    color: $color-link;
+    font-size: $font-size;
+  }
 }
 
 .landingForm {
@@ -16,7 +16,8 @@
   background-color: $color-grey-extra-light;
   height: 600px;
   .form {
-      padding: 20px 100px 20px 100px;
+    padding: 20px 100px 20px 100px;
+    width: 50%;
     input + button {
       margin-top: 0.8rem;
     }
@@ -25,7 +26,7 @@
     background-image: url("https://images.unsplash.com/photo-1573147367786-a5a227916f0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 50%;
   }
   @media only screen and #{$mobile} {
     display: flex;

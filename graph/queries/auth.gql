@@ -5,3 +5,9 @@ query login($username: String!, $password: String!) {
     }
 }
 
+query register($username: String!, $email:String!, $password: String!, $password2: String!) {
+    Register(input: {username: $username, email: $email, password: $password, password2: $password2}) {
+        Status
+        StatusMessage
+    }
+}

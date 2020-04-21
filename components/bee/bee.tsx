@@ -17,7 +17,7 @@ import { NamespaceLink } from "components/class/link/link";
 import { Container } from "components/class/container/container";
 
 const BeePage: FC<{ namespace: Namespace }> = ({ namespace }) => {
-  const { current, setCurrent, setTitle } = useContext(Context);
+  const { auth, current, setCurrent, setTitle } = useContext(Context);
   const [bee, setBee] = useState(current);
   const { author, name } = namespace;
 
@@ -27,7 +27,7 @@ const BeePage: FC<{ namespace: Namespace }> = ({ namespace }) => {
 
 
   const qVars = {
-    token: "fake token",
+    token: auth.token,
     author,
     name
   };

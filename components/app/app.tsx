@@ -11,6 +11,7 @@ type Props = {
 };
 export default ({ children, token }: Props) => {
   const ctx = useAuthed(token)
+  if (!ctx.auth.authenticated) return null
   return (
     <Context.Provider value={ctx}>
       <ApolloProvider client={createApolloClient(null, true)}>

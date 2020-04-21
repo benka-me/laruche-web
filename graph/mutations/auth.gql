@@ -1,6 +1,0 @@
-mutation Register ($email: String!, $username:String!, $password:String!, $password2:String!) {
-    register(input:{email:$email, username:$username, password:$password, password2:$password2}) {
-        Status
-        StatusMessage
-    }
-}

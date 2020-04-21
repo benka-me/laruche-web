@@ -4,17 +4,20 @@ import {
   LoginQueryVariables,
   LoginDocument,
   LoginQueryResult,
-  RegisterMutationVariables,
+  RegisterQueryVariables,
+  RegisterQueryResult,
+  RegisterDocument,
 } from "graph/graphql";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { Lazy } from "types/types";
 import Input from "components/class/form/Input";
-import Button from "components/class/button/Button";
+import Button from "components/class/button/button";
 import css from "./login.scss";
 import Toggle from "components/auth/Toggle";
+import { useEffect } from "react";
 
-type LazyLogin = Lazy<LoginQueryVariables, LoginQueryResult>;
-const initVars: RegisterMutationVariables = {
+type LazyRegister = Lazy<RegisterQueryVariables, RegisterQueryResult>;
+const initVars: RegisterQueryVariables = {
   username: "",
   password: "",
   email: "",
@@ -23,27 +26,33 @@ const initVars: RegisterMutationVariables = {
 type Props = {
   toggle: () => void;
 };
+
 export default ({ toggle }: Props) => {
-  const [tryLogin, { error, loading, data }]: LazyLogin = useLazyQuery(
-    LoginDocument
+  const [fetch, { error, loading, data, refetch }]: LazyRegister = useLazyQuery(
+    RegisterDocument
   );
 
-  if (error) return <p>Error...</p>;
+  let tryRegister = (v) => fetch({ variables: v });
+
   if (loading) return <p>Loading ...</p>;
-  if (data) {
+  if (data && !data.Register.Status) tryRegister = refetch;
+  if (data && data.Register.Status) {
+    setTimeout(toggle, 2000)
     return (
-      <div>
-        <p>{data.Login.TokenErr}</p>
+      <div className={css.form}>
+        <p>{data.Register.StatusMessage}</p>
       </div>
     );
   }
+
   return (
     <div className={css.form}>
-      <h2>Register in</h2>
+      <h2>Register</h2>
       <Formik
         initialValues={initVars}
-        onSubmit={(values: LoginQueryVariables) => {
-          tryLogin({ variables: values });
+        onSubmit={(values: RegisterQueryVariables, helper) => {
+          helper.setSubmitting(false)
+          tryRegister(values);
         }}
         validationSchema={Yup.object().shape({
           username: Yup.string()
@@ -62,6 +71,7 @@ export default ({ toggle }: Props) => {
       >
         {(props) => {
           const { isSubmitting, handleSubmit } = props;
+          props.enableReinitialize = true;
           return (
             <form onSubmit={handleSubmit}>
               <Input
@@ -102,8 +112,11 @@ export default ({ toggle }: Props) => {
               <Toggle toggle={toggle} name="login">
                 <p>Already registered?</p>
               </Toggle>
-
-              <DisplayFormikState {...props} />
+              {data && !data.Register.Status ? (
+                <Button fluid color="error" design="rounded">
+                  {data.Register.StatusMessage}
+                </Button>
+              ) : null}
             </form>
           );
         }}
@@ -111,18 +124,3 @@ export default ({ toggle }: Props) => {
     </div>
   );
 };
-
-export const DisplayFormikState = (props) => (
-  <div style={{ margin: "1rem 0" }}>
-    <h3 style={{ fontFamily: "monospace" }} />
-    <pre
-      style={{
-        background: "#f6f8fa",
-        fontSize: ".65rem",
-        padding: ".5rem",
-      }}
-    >
-      <strong>props</strong> = {JSON.stringify(props, null, 2)}
-    </pre>
-  </div>
-);

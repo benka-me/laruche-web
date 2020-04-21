@@ -1,5 +1,5 @@
 # source: http://localhost:8088
-# timestamp: Fri Apr 17 2020 13:45:21 GMT+0200 (GMT+02:00)
+# timestamp: Mon Apr 20 2020 14:42:38 GMT+0200 (GMT+02:00)
 
 input Auth {
   Token: String!
@@ -59,16 +59,13 @@ type LoginRes {
   TokenErr: String!
 }
 
-type Mutation {
-  register(input: RegisterReq!): RegisterRes!
-}
-
 type Query {
   Login(username: String!, password: String!): LoginRes!
   GetHome(input: HomeReq!): Home!
   GetBee(input: BeeReq!): Bee!
   GetBeeDetails(input: BeeReq!): BeeDetails!
   GetFullBee(input: BeeReq!): FullBee!
+  Register(input: RegisterReq!): RegisterRes!
 }
 
 input RegisterReq {

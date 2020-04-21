@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
-import * as ApolloReactCommon from '@apollo/react-common';
 import * as React from 'react';
+import * as ApolloReactCommon from '@apollo/react-common';
 import * as ApolloReactComponents from '@apollo/react-components';
 import * as ApolloReactHoc from '@apollo/react-hoc';
 export type Maybe<T> = T | null;
@@ -79,16 +79,6 @@ export type LoginRes = {
   TokenErr: Scalars['String'],
 };
 
-export type Mutation = {
-   __typename?: 'Mutation',
-  register: RegisterRes,
-};
-
-
-export type MutationRegisterArgs = {
-  input: RegisterReq
-};
-
 export type Query = {
    __typename?: 'Query',
   Login: LoginRes,
@@ -96,6 +86,7 @@ export type Query = {
   GetBee: Bee,
   GetBeeDetails: BeeDetails,
   GetFullBee: FullBee,
+  Register: RegisterRes,
 };
 
 
@@ -124,6 +115,11 @@ export type QueryGetFullBeeArgs = {
   input: BeeReq
 };
 
+
+export type QueryRegisterArgs = {
+  input: RegisterReq
+};
+
 export type RegisterReq = {
   email: Scalars['String'],
   username: Scalars['String'],
@@ -145,22 +141,6 @@ export type Rpc = {
   Line: Scalars['String'],
 };
 
-export type RegisterMutationVariables = {
-  email: Scalars['String'],
-  username: Scalars['String'],
-  password: Scalars['String'],
-  password2: Scalars['String']
-};
-
-
-export type RegisterMutation = (
-  { __typename?: 'Mutation' }
-  & { register: (
-    { __typename?: 'RegisterRes' }
-    & Pick<RegisterRes, 'Status' | 'StatusMessage'>
-  ) }
-);
-
 export type LoginQueryVariables = {
   username: Scalars['String'],
   password: Scalars['String']
@@ -172,6 +152,22 @@ export type LoginQuery = (
   & { Login: (
     { __typename?: 'LoginRes' }
     & Pick<LoginRes, 'Status' | 'TokenErr'>
+  ) }
+);
+
+export type RegisterQueryVariables = {
+  username: Scalars['String'],
+  email: Scalars['String'],
+  password: Scalars['String'],
+  password2: Scalars['String']
+};
+
+
+export type RegisterQuery = (
+  { __typename?: 'Query' }
+  & { Register: (
+    { __typename?: 'RegisterRes' }
+    & Pick<RegisterRes, 'Status' | 'StatusMessage'>
   ) }
 );
 
@@ -245,34 +241,6 @@ export type GetBeeDetailsQuery = (
 );
 
 
-export const RegisterDocument = gql`
-    mutation Register($email: String!, $username: String!, $password: String!, $password2: String!) {
-  register(input: {email: $email, username: $username, password: $password, password2: $password2}) {
-    Status
-    StatusMessage
-  }
-}
-    `;
-export type RegisterMutationFn = ApolloReactCommon.MutationFunction<RegisterMutation, RegisterMutationVariables>;
-export type RegisterComponentProps = Omit<ApolloReactComponents.MutationComponentOptions<RegisterMutation, RegisterMutationVariables>, 'mutation'>;
-
-    export const RegisterComponent = (props: RegisterComponentProps) => (
-      <ApolloReactComponents.Mutation<RegisterMutation, RegisterMutationVariables> mutation={RegisterDocument} {...props} />
-    );
-    
-export type RegisterProps<TChildProps = {}> = ApolloReactHoc.MutateProps<RegisterMutation, RegisterMutationVariables> & TChildProps;
-export function withRegister<TProps, TChildProps = {}>(operationOptions?: ApolloReactHoc.OperationOption<
-  TProps,
-  RegisterMutation,
-  RegisterMutationVariables,
-  RegisterProps<TChildProps>>) {
-    return ApolloReactHoc.withMutation<TProps, RegisterMutation, RegisterMutationVariables, RegisterProps<TChildProps>>(RegisterDocument, {
-      alias: 'register',
-      ...operationOptions
-    });
-};
-export type RegisterMutationResult = ApolloReactCommon.MutationResult<RegisterMutation>;
-export type RegisterMutationOptions = ApolloReactCommon.BaseMutationOptions<RegisterMutation, RegisterMutationVariables>;
 export const LoginDocument = gql`
     query login($username: String!, $password: String!) {
   Login(username: $username, password: $password) {
@@ -299,6 +267,32 @@ export function withLogin<TProps, TChildProps = {}>(operationOptions?: ApolloRea
     });
 };
 export type LoginQueryResult = ApolloReactCommon.QueryResult<LoginQuery, LoginQueryVariables>;
+export const RegisterDocument = gql`
+    query register($username: String!, $email: String!, $password: String!, $password2: String!) {
+  Register(input: {username: $username, email: $email, password: $password, password2: $password2}) {
+    Status
+    StatusMessage
+  }
+}
+    `;
+export type RegisterComponentProps = Omit<ApolloReactComponents.QueryComponentOptions<RegisterQuery, RegisterQueryVariables>, 'query'> & ({ variables: RegisterQueryVariables; skip?: boolean; } | { skip: boolean; });
+
+    export const RegisterComponent = (props: RegisterComponentProps) => (
+      <ApolloReactComponents.Query<RegisterQuery, RegisterQueryVariables> query={RegisterDocument} {...props} />
+    );
+    
+export type RegisterProps<TChildProps = {}> = ApolloReactHoc.DataProps<RegisterQuery, RegisterQueryVariables> & TChildProps;
+export function withRegister<TProps, TChildProps = {}>(operationOptions?: ApolloReactHoc.OperationOption<
+  TProps,
+  RegisterQuery,
+  RegisterQueryVariables,
+  RegisterProps<TChildProps>>) {
+    return ApolloReactHoc.withQuery<TProps, RegisterQuery, RegisterQueryVariables, RegisterProps<TChildProps>>(RegisterDocument, {
+      alias: 'register',
+      ...operationOptions
+    });
+};
+export type RegisterQueryResult = ApolloReactCommon.QueryResult<RegisterQuery, RegisterQueryVariables>;
 export const GetHomeDocument = gql`
     query getHome($token: String!) {
   GetHome(input: {Token: $token}) {

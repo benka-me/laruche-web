@@ -14,13 +14,13 @@ export const HomeTitle = () => <h1>Laruche</h1>;
 
 interface HomeProps {}
 export default ({}: HomeProps) => {
-  const { title, setTitle } = useContext(Context);
+  const { title, setTitle, auth } = useContext(Context);
   useEffect(() => {
     setTitle(HomeTitle);
     return () => {};
   }, []);
 
-  const queryVars: GetHomeQueryVariables = { token: "fake token" };
+  const queryVars: GetHomeQueryVariables = { token: auth.token };
 
   return (
     <Container>
