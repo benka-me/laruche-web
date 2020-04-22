@@ -33,7 +33,7 @@ export default ({ toggle }: Props) => {
   if (loading) <div className={css.form}><p>Loading...</p></div>
   if (data) {
     return (
-      <div>
+      <div className={css.form}>
         <p>{data.Login.TokenErr}</p>
       </div>
     );
