@@ -9,7 +9,7 @@ export default function createApolloClient(initialState, ctx) {
   return new ApolloClient({
     ssrMode: true,
     link: new HttpLink({
-      uri: 'http://15.188.93.217:8088', // Server URL (must be absolute)
+      uri: 'http://api.laruche.services:8088', // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch,
     }),
