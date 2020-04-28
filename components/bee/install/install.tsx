@@ -3,13 +3,13 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { solarizedDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import CopyToClipboard from "react-copy-to-clipboard";
 import css from "./install.scss";
-import { Namespace } from "../../../types/types";
+import { Namespace } from "types/types";
 
 interface InstallProps {
   namespace: Namespace;
 }
 export default ({ namespace }: InstallProps) => {
-  const code: string = `$> hive i ${namespace.getString()}`;
+  const code: string = `$> laruche add ${namespace.getString()}`;
   const [done, setDone] = useState(false);
 
   useEffect(() => {

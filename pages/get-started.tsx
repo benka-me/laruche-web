@@ -19,11 +19,8 @@ export default () => {
         Protoc installation
       </a>
       <Divider />
-      <h3>gogoslick proto</h3>
-      <Pre lang="terminal">$> go get github.com/gogo/protobuf/gogoslick</Pre>
-      <Divider />
-      <h3>Hive CLI</h3>
-      <Pre lang="terminal">$> go get github.com/benka-me/hive</Pre>
+      <h3>Laruche CLI</h3>
+      <Pre lang="terminal">$> go get github.com/benka-me/laruche</Pre>
       <Divider />
 
     </Container>
