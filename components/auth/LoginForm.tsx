@@ -22,16 +22,19 @@ type Props = {
 };
 export default ({ toggle }: Props) => {
   const { auth, setAuth } = useContext(context);
-  const [tryLogin, { error, loading, data }]: LazyLogin = useLazyQuery(
+  const [fetch, { error, loading, data, refetch }]: LazyLogin = useLazyQuery(
     LoginDocument
   );
+
+  let tryLogin = (v) => fetch({ variables: v });
+
   useEffect(() => {
     if (data && data.Login.Status) Login(data.Login.TokenErr, setAuth);
   }, [data]);
 
-  if (error) return <p>Error...</p>;
-  if (loading) <div className={css.form}><p>Loading...</p></div>
-  if (data) {
+  if (data && !data.Login.Status) tryLogin = refetch;
+  if (data && data.Login.Status) {
+    setTimeout(toggle, 2000)
     return (
       <div className={css.form}>
         <p>{data.Login.TokenErr}</p>
@@ -43,8 +46,9 @@ export default ({ toggle }: Props) => {
       <h2>Login</h2>
       <Formik
         initialValues={initVars}
-        onSubmit={(values: LoginQueryVariables) => {
-          tryLogin({ variables: values });
+        onSubmit={(values: LoginQueryVariables, helper) => {
+          helper.setSubmitting(false)
+          tryLogin(values);
         }}
         validationSchema={Yup.object().shape({
           password: Yup.string().required("Required"),
@@ -52,6 +56,7 @@ export default ({ toggle }: Props) => {
         })}
       >
         {(props) => {
+          props.enableReinitialize = true;
           const { isSubmitting, handleSubmit } = props;
           return (
             <form onSubmit={handleSubmit}>
@@ -75,6 +80,11 @@ export default ({ toggle }: Props) => {
               <Toggle toggle={toggle} name="register">
                 <p>Not Registered?</p>
               </Toggle>
+              {data && !data.Login.Status ? (
+                <Button fluid color="error" design="rounded">
+                  {data.Login.TokenErr}
+                </Button>
+              ) : null}
 
             </form>
           );

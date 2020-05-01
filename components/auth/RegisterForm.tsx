@@ -1,9 +1,6 @@
 import { Formik } from "formik";
 import * as Yup from "yup";
 import {
-  LoginQueryVariables,
-  LoginDocument,
-  LoginQueryResult,
   RegisterQueryVariables,
   RegisterQueryResult,
   RegisterDocument,
@@ -34,7 +31,7 @@ export default ({ toggle }: Props) => {
 
   let tryRegister = (v) => fetch({ variables: v });
 
-  if (loading) return <p>Loading ...</p>;
+  // if (loading) return <p>Loading ...</p>;
   if (data && !data.Register.Status) tryRegister = refetch;
   if (data && data.Register.Status) {
     setTimeout(toggle, 2000)
